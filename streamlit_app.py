@@ -41,7 +41,7 @@ def calculate_leave(start_date):
         end_date = datetime.date(start_date.year, 12, 31)
         # 전년도의 마지막 날과 전년도의 첫 날 (또는 입사일) 사이의 일수를 계산
         days_worked_previous_year = (end_date - start_date).days + 1
-        proportional_leave = math.ceil(round((days_worked_previous_year / 365) * 15), 1)
+        proportional_leave = math.ceil(round((days_worked_previous_year / 365) * 15, 1))
 
         leave = previous_year_leave + current_year_leave + proportional_leave
         st.write(f"당신은 {employment_years + 1}년차이고")

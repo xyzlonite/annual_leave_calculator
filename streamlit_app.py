@@ -27,7 +27,7 @@ def calculate_leave(start_date):
         leave = min(11, months_worked)
         st.write(f"입사 {employment_years + 1}년차이고")
         st.write(f"오늘({today}) 기준 월차 개수는 {leave}일입니다.")
-        st.write("해당 월차는 입사 다음년도 12월 31일까지 사용하실 수 있습니다")
+        st.write("해당 월차는 입사 다음년도 12월 31일까지 사용하실 수 있습니다.")
     # elif employment_years == 1:
     #     # 1년차 연차 계산: 해가 바뀌면 1년치만 계산
     #     proportional_leave = math.ceil(((start_date.replace(year=start_date.year + 1) - start_date).days / 365) * 15)
@@ -51,7 +51,7 @@ def calculate_leave(start_date):
         st.markdown("***")
         st.write("비례연차 계산 공식 (전년도 근속일수 / 365 )* 15 한 값에 소수점을 올림한 만큼 지급")
         st.write(
-            f"\t전년도 근속일수는 {days_worked_previous_year}일 ({days_worked_previous_year} / 365) * 15 = {round((days_worked_previous_year / 365) * 15, 1)}를 소수점 첫번째 자리에서 올림"
+            f"\t전년도 근속일수는 {days_worked_previous_year}일 ({days_worked_previous_year} / 365) * 15 = {round((days_worked_previous_year / 365) * 15, 1)} => {proportional_leave}일"
         )
 
     else:
